@@ -1,14 +1,17 @@
-#include <stdlib.h>
-#include <time.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
-int main(void)
+#include <stdio.h>
+int main()
 {
-
-        int n;
-        srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
-	return (0);
+    int n, sum=0, firstDigit, lastDigit;
+    printf("Enter number = ");
+    scanf("%d", &n);
+    // Find last digit of a number
+    lastDigit = n % 10;
+    //Find the first digit by dividing n by 10 until n greater then 10
+    while(n >= 10)
+    {
+        n = n / 10;
+    }
+    firstDigit = n;
+    printf("first digit = %d and last digit = %d\n\n", firstDigit,lastDigit);
+    return 0;
 }
