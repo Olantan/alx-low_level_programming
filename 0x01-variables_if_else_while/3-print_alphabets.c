@@ -1,42 +1,22 @@
-// C program to print alphabets 
-#include <stdio.h> 
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-  
-// Function to print the alphabet 
-// in lower case 
-void lowercaseAlphabets() 
-{ 
- // for lowercase 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
-    for (int c = 97; c <= 122; ++c) 
-printf("%c ", c); 
+int main(void)
+{
+	char low;
 
-    printf("\n"); 
-} 
-// Function to print the alphabet 
-// in upper case 
-printf("\n"); 
-} 
-// Function to print the alphabet 
-// in upper case 
-void uppercaseAlphabets() 
-{ 
-// Run a loop from 65 to 90 
-for (int c = 65; c <= 90; ++c) 
-// print its ascii values 
-printf("%c ", c); 
-printf("\n"); 
-} 
-// Driver program 
+	for (low = 'a'; low <= 'z'; low++)
+		putchar(low);
+	for (low = 'A'; low <= 'Z'; low++)
+		putchar(low);
+	putchar('\n');
 
-int main() 
-{ 
-printf("Uppercase Alphabets\n"); 
-
-    uppercaseAlphabets(); 
-
-  printf("Lowercase Alphabets\n"); 
-
-    lowercaseAlphabets(); 
-return 0; 
-} 
+	return (0);
+}
