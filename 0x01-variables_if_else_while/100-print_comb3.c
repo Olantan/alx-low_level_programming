@@ -1,33 +1,36 @@
-
-#include<stdio.h>
-#include<string.h>
-#define N 10
- 
-void print(int *num, int n)
-{
-    int i;
-    for ( i = 0 ; i < n ; i++)
-        printf("%d ", num[i]);
-    printf("\n");
-}
-int main()
-{
-    int num[N];
-    int *ptr;
-    int temp;
-    int i, n, j;
-    printf("\nHow many number you want to enter: ");
-        scanf("%d", &n);
-    printf("\nEnter a list of numbers to see all combinations:\n");
-    for (i = 0 ; i < n; i++)
-        scanf("%d", &num[i]);
-    for (j = 1; j <= n; j++) {
-        for (i = 0; i < n-1; i++) {
-            temp = num[i];
-            num[i] = num[i+1];
-            num[i+1] = temp;
-            print(num, n);
-	}
-    }
-    return 0;
-}
+/* 
+  * File: 100-print_comb3.c 
+  * Auth: Brennan D Baraban 
+  */ 
+  
+ #include <stdio.h> 
+  
+ /** 
+  * main - Prints all possible combinations of two different digits, 
+  *        in ascending order, separated by a comma followed by a space. 
+  * 
+  * Return: Always 0. 
+  */ 
+ int main(void) 
+ { 
+         int digit1, digit2; 
+  
+         for (digit1 = 0; digit1 < 9; digit1++) 
+         { 
+                 for (digit2 = digit1 + 1; digit2 < 10; digit2++) 
+                 { 
+                         putchar((digit1 % 10) + '0'); 
+                         putchar((digit2 % 10) + '0'); 
+  
+                         if (digit1 == 8 && digit2 == 9) 
+                                 continue; 
+                          
+                         putchar(','); 
+                         putchar(' '); 
+                 } 
+         } 
+  
+         putchar('\n'); 
+  
+         return (0); 
+ }
