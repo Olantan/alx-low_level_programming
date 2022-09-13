@@ -1,28 +1,18 @@
-#include "main.h"
-
-/**
-* main - tests function that prints if integer is positive or negative
-* Return: 0
-*/
-
-int main(void)
-{
-        int i;
-
-        i = 98;
-        positive_or_negative(i);
-
-        return (0);
-}
-
-#ifndef HOLBERTON_H 
- #define HOLBERTON_H 
-  
+##include "../holberton.h" 
  #include <stdio.h> 
   
- void positive_or_negative(int i); 
- int largest_number(int a, int b, int c); 
- void print_remaining_days(int month, int day, int year); 
- int convert_day(int month, int day); 
+ /** 
+  * main - check the code for Holberton School students. 
+  * 
+  * Return: Always 0. 
+  */ 
+ int main(void) 
+ { 
+         char c; 
   
- #endif /* HOLBERTON_H */
+         c = 'A'; 
+         printf("%c: %d\n", c, _isupper(c)); 
+         c = 'a'; 
+         printf("%c: %d\n", c, _isupper(c)); 
+         return (0); 
+ }
