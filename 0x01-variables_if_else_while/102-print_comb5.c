@@ -1,33 +1,35 @@
-#include<stdio.h>
-#include<string.h>
-#define N 10
- 
-void print(int *num, int n)
-{
-    int i;
-    for ( i = 0 ; i < n ; i++)
-        printf("%d ", num[i]);
-    printf("\n");
-}
-int main()
-{
-    int num[N];
-    int *ptr;
-    int temp;
-    int i, n, j;
-    printf("\nHow many number you want to enter: ");
-        scanf("%d", &n);
-    printf("\nEnter a list of numbers to see all combinations:\n");
-    for (i = 0 ; i < n; i++)
-        scanf("%d", &num[i]);
-    for (j = 1; j <= n; j++) {
-        for (i = 0; i < n-1; i++) {
-            temp = num[i];
-            num[i] = num[i+1];
-            num[i+1] = temp;
-            print(num, n);
-	}
-    }
-    return 0;
-}
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
+/**
+ * main - Printing combinations of two two-digit numbers.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	int nb1, nb2;
+
+	for (nb1 = 0; nb1 <= 98; nb1++)
+	{
+		for (nb2 = nb1 + 1; nb2 <= 99; nb2++)
+		{
+			putchar((nb1 / 10) + '0');
+			putchar((nb1 % 10) + '0');
+			putchar(' ');
+			putchar((nb2 / 10) + '0');
+			putchar((nb2 % 10) + '0');
+
+			if (nb1 == 98 && nb2 == 99)
+				break;
+
+			putchar(',');
+			putchar(' ');
+		}
+	}
+
+	putchar('\n');
+
+	return (0);
+}
