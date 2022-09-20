@@ -1,24 +1,17 @@
-#include "holberton.h"
+include <stdio.h>
+
+void puts_half(char *);
 
 /**
- * puts_half - half of a string.
- * @str: string to be printed.
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
  */
-void puts_half(char *str)
+int main(void)
 {
-	int i = 0, len = 0, j;
+	char *str;
 
-	while (str[i++])
-		len++;
-
-	if ((len % 2) == 0)
-		j = len / 2;
-
-	else
-		j = (len + 1) / 2;
-
-	for (i = j; i < len; i++)
-		_putchar(str[i]);
-
-	_putchar('\n');
+	str = "Holberton!";
+	puts_half(str);
+	return (0);
 }
