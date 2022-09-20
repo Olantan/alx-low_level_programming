@@ -1,21 +1,17 @@
-#include "holberton.h"
+#include "main.h"
+#include <stdio.h>
 
 /**
- * rev_string - Reverses a string.
- * @s: string to be reserved.
+ * main - check the code
+ *
+ * Return: Always 0.
  */
-void rev_string(char *s)
+int main(void)
 {
-	int i = 0, len = 0;
-	char tmp;
+    char s[10] = "My School";
 
-	while (s[i++])
-		len++;
-
-	for (i = len - 1; i >= len / 2; i--)
-	{
-		tmp = s[i];
-		s[i] = s[len - i - 1];
-		s[len - i - 1] = tmp;
-	}
+    printf("%s\n", s);
+    rev_string(s);
+    printf("%s\n", s);
+    return (0);
 }
