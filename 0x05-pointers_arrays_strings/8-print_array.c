@@ -1,22 +1,18 @@
-#include "main.h"
-#include <stdio.h>
+include <stdio.h>
+
+void print_array(int *, int);
 
 /**
- * print_array - a function that prints n elements of an array of integers,
- * followed by a new line.
- * @a: an input array
- * @n: an input integer
- * Return: Nothing
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
  */
-void print_array(int *a, int n)
+int main(void)
 {
-	int i = 0;
+	int array[5] = {
+		-198, 298, 402, -1024, 98
+	};
 
-	for (; i < n; i++)
-	{
-		printf("%d", a[i]);
-		if (i < n - 1)
-			printf(", ");
-	}
-	putchar('\n');
+	print_array(array, 5);
+	return (0);
 }
