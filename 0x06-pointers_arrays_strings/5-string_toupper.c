@@ -1,19 +1,18 @@
-#include"holberton.h"
-/**
- * string_toupper - fonction toupper
- * @a: pointer
- * Return: pointer in return
- */
-char *string_toupper(char *a)
-{
-	int i;
+#include "main.h"
+#include <stdio.h>
 
-	for (i = 0; a[i] != 0; i++)
-	{
-		if (a[i] > 90 && a[i] != 10)
-	{
-		a[i] = a[i] - 32;
-	}
-	}
-	return (a);
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char str[] = "Look up!\n";
+    char *ptr;
+
+    ptr = string_toupper(str);
+    printf("%s", ptr);
+    printf("%s", str);
+    return (0);
 }
