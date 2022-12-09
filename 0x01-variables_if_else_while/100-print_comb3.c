@@ -1,4 +1,3 @@
-36 lines (29 sloc)  585 Bytes
 /*
  * File: 100-print_comb3.c
  * Auth: Brennan D Baraban
