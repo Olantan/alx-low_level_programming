@@ -1,28 +1,34 @@
+/*
+ * File: 102-fibonacci.c
+ * Auth: Brennan D Baraban
+ */
+
 #include <stdio.h>
-int main() {
 
-  int i, n;
+/**
+ * main - Prints first 50 Fibonacci numbers, starting with 1 and 2,
+ *        separated by a comma followed by a space.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	int count;
+	unsigned long fib1 = 0, fib2 = 1, sum;
 
-  // initialize first and second terms
-  int t1 = 0, t2 = 1;
+	for (count = 0; count < 50; count++)
+	{
+		sum = fib1 + fib2;
+		printf("%lu", sum);
 
-  // initialize the next term (3rd term)
-  int nextTerm = t1 + t2;
+		fib1 = fib2;
+		fib2 = sum;
 
-  // get no. of terms from user
-  printf("Enter the number of terms: ");
-  scanf("%d", &n);
+		if (count == 49)
+			printf("\n");
+		else
+			printf(", ");
+	}
 
-  // print the first two terms t1 and t2
-  printf("Fibonacci Series: %d, %d, ", t1, t2);
-
-  // print 3rd to nth terms
-  for (i = 3; i <= n; ++i) {
-    printf("%d, ", nextTerm);
-    t1 = t2;
-    t2 = nextTerm;
-    nextTerm = t1 + t2;
-  }
-
-  return 0;
+	return (0);
 }
