@@ -1,6 +1,7 @@
+
 /*
  * File: 10-add.c
- * Auth: Olantan 
+ * Auth: Olantan
  */
 
 #include "main.h"
