@@ -1,18 +1,25 @@
-include <stdio.h>
-
-void print_array(int *, int);
+#include "main.h"
+#include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_array - Prints an inputted number of elements
+ *               of an array of integers.
+ * @a: The array of integers.
+ * @n: The number of elements to be printed.
  */
-int main(void)
+void print_array(int *a, int n)
 {
-	int array[5] = {
-		-198, 298, 402, -1024, 98
-	};
+	int index;
 
-	print_array(array, 5);
-	return (0);
+	for (index = 0; index < n; index++)
+	{
+		printf("%d", a[index]);
+
+		if (index == n - 1)
+			continue;
+
+		printf(", ");
+	}
+
+	printf("\n");
 }
