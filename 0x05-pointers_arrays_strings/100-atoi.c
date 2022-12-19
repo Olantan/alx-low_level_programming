@@ -1,17 +1,27 @@
-include <stdio.h>
-
-int _atoi(char *);
+#include "main.h"
 
 /**
- * main - check the code for Holberton School students.
+ * _atoi - Converts a string to an integer.
+ * @s: The string to be converted.
  *
- * Return: Always 0.
+ * Return: The integer value of the converted string.
  */
-int main(void)
+int _atoi(char *s)
 {
-	int n;
+	int sign = 1;
+	unsigned int num = 0;
 
-	n = _atoi("4");
-	printf("%d\n", n);
-	return (0);
+	do {
+		if (*s == '-')
+			sign *= -1;
+
+		else if (*s >= '0' && *s <= '9')
+			num = (num * 10) + (*s - '0');
+
+		else if (num > 0)
+			break;
+
+	} while (*s++);
+
+	return (num * sign);
 }
