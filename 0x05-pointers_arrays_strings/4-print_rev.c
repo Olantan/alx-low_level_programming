@@ -1,19 +1,17 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
- * _puts - Write a function that prints a string, followed
- * by a new line, to stdout.
- * @str: an input string
- * Return: Nothing
+ * print_rev - Prints a string in reverse.
+ * @s: string to be reserved.
  */
-void _puts(char *str)
+void print_rev(char *s)
 {
-	int i = 0;
+	int len = 0, i;
 
-	while (str[i] != '\0')
-	{
-		_putchar(str[i]);
-		i++;
-	}
+	while (s[i++])
+		len++;
+
+	for (i = len - 1; i >= 0; i--)
+		_putchar(s[i]);
+
 	_putchar('\n');
 }
