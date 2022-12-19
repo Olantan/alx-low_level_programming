@@ -1,18 +1,18 @@
 #include "main.h"
-include <stdio.h>
-
-void puts2(char *);
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * puts2 - Prints one char out of two of a string.
+ * @str: The string containing characters.
  */
-int main(void)
+void puts2(char *str)
 {
-	char *str;
+	int i, len = 0;
 
-	str = "Holberton!\0Holberton";
-	puts2(str);
-	return (0);
+	while (str[i++])
+		len++;
+
+	for (i = 0; i < len; i += 2)
+		_putchar(str[i]);
+
+	_putchar('\n');
 }
