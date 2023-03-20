@@ -1,2 +1,3 @@
-#!/bin/bashwget -P /tmp https://github.com/olantan/holbertonschool-low_level_programming/raw/master/0x17-dynamic_libraries/putshack.so
-export LD_PRELOAD=/tmp/putshack.so
+#!/bin/bash
+wget -q -O /tmp/libtest.so https://github.com/Olantan/alx-low_level_programming/raw/master/0x18-dynamic_libraries/libtest.so
+export LD_PRELOAD=/tmp/libtest.so
